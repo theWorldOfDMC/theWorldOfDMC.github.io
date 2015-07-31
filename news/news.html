@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>news</title>
+	<style>
+		body{font:14px/20px vertical,'Microsoft yahei'; color:#999;}
+		*{margin:0; padding:0;}
+		.clearfix:after,.clearfix:before{content:''; display:block; clear:both; visibility:hidden; height:0;}
+		main{margin:50px auto;}
+		.news{width:990px; height:75px; background-image:-moz-linear-gradient(top,#FFF,#f2f2f2); background-image:-webkit-linear-gradient(top,#FFF,#f2f2f2); background-image:-ms-linear-gradient(top,#FFF,#f2f2f2); background-image:-o-linear-gradient(top,#FFF,#f2f2f2); margin:0 auto; line-height:25px; overflow:hidden; box-shadow:0 1px 2px 0 rgba(0,0,0,0.3); position:relative;}
+		.news ul{position:absolute; left:0; top:-50px; width:100%;}
+		.news ul li{height:25px; line-height:25px; text-align:center; -webkit-transition:all,1s,linear,0s; -moz-transition:all,1s,linear,0s; -ms-transition:all,1s,linear,0s; -o-transition:all,1s,linear,0s;}
+		.news ul li.cur{font-size:18px; color:#666; -webkit-transition:all,1s,linear,0s; -moz-transition:all,1s,linear,0s; -ms-transition:all,1s,linear,0s; -o-transition:all,1s,linear,0s;}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="news">
+			<ul class="clearfix">
+				<li class="stance">the news onethe news one 14</li>
+				<li class="stance">the news onethe news onethe news one 15</li>
+				<li>the news onethe news onethe news onethe news onethe news onethe news one 1</li>
+				<li class="cur">the news onethe news onethe news onethe news onethe news onethe news onethe news one 2</li>
+				<li>the news onethe news onethe news onethe news one 3</li>
+				<li>the news onethe news one 4</li>
+				<li>the news onethe news onethe news one 5</li>
+				<li>the news onethe news onethe news onethe news onethe news onethe news one 6</li>
+				<li>the news onethe news onethe news onethe news onethe news onethe news onethe news one 7</li>
+				<li>the news onethe news onethe news onethe news one 8</li>
+				<li>the news onethe news one 9</li>
+				<li>the news onethe news onethe news one 10</li>
+				<li>the news onethe news onethe news onethe news onethe news onethe news one 11</li>
+				<li>the news onethe news onethe news onethe news onethe news onethe news onethe news one 12</li>
+				<li>the news onethe news onethe news onethe news one 13</li>
+				<li>the news onethe news one 14</li>
+				<li>the news onethe news onethe news one 15</li>
+				<li class="stance">the news onethe news onethe news onethe news onethe news onethe news one 1</li>
+			</ul>
+		</div>
+	</main>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var $ul = $('.news ul'),
+				$ulTopWindow = $ul.offset().top,
+				$li = $('.news li:not(.stance)'),
+				$slideTimes = 0,
+				$time = 3000,
+				$init = window.setInterval(function(e){
+					slideShow($li);
+				},$time);
+			function slideShow($li){
+				var $li_all = $('.news li'),
+					$li_cur = $li_all.filter(function(index){
+						var $this = $(this);
+						return $this.hasClass('cur');
+					});
+				if($slideTimes > $li.length - 3){
+					$ul.css('top',0).animate({
+						top : '-25px'
+					},1000);
+					$li_cur.removeClass('cur');
+					$li_all.eq(2).addClass('cur');
+					$ulTopWindow = 25;
+					$slideTimes = -1;
+				}else{
+					$ulTopWindow == 0 ? $ulTopWindow = 50 :0;
+					$ul.animate({
+						top : -$ulTopWindow - 25
+					},1000);
+					$li_cur.removeClass('cur').next().addClass('cur');
+					$ulTopWindow += 25;
+				}
+				$slideTimes++;
+			}
+		});
+	</script>
+</body>
+</html>
