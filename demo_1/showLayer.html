@@ -51,10 +51,9 @@
 					right : '20px',
 					top : '0',
 					opacity : 0,
-					display : 'none',
-					overflow : 'hidden'
+					display : 'none'
 				})
-				.html('<h1>'+ $this.text() +'</h1><p>'+ $this.text() +'content</p><p>'+ $str +'</p>')
+				.html('<h1>'+ $this.text() +'</h1><p>'+ $this.text() +'content</p><p class="con">'+ $str +'</p>')
 				.appendTo($panel_div)
 				.stop(false,true)
 				.show()
@@ -62,7 +61,8 @@
 					opacity : 1,
 					right : 0
 				},500,function(){
-					$(this).slideDown();
+					console.log($(this));
+					$(this).find('p.con').slideDown();
 				});
 			});
 		});
