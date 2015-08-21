@@ -60,9 +60,10 @@
 				.show()
 				.animate({
 					opacity : 1,
-					right : 0,
-					height : 'auto'
-				},500);
+					right : 0
+				},500,function(){
+					$(this).slideDown();
+				});
 			});
 		});
     </script>
