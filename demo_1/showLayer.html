@@ -17,7 +17,6 @@
 		li:first-child{margin-top:0;}
 		a{color:#666; display:block; width:150px; height:30px; line-height:30px; border:1px solid #f7f7f7; border-radius:2px; text-decoration:none; text-align:center;}
 		.panel{width:900px; position:relative;}
-		.con{display:none;}
     </style>
     <div class="main">
     	<div class="L">
@@ -54,7 +53,7 @@
 					opacity : 0,
 					display : 'none'
 				})
-				.html('<h1>'+ $this.text() +'</h1><p>'+ $this.text() +'content</p><p class="con">'+ $str +'</p>')
+				.html('<h1>'+ $this.text() +'</h1><p>'+ $this.text() +'content</p><p class="con" style="display:none;">'+ $str +'</p>')
 				.appendTo($panel_div)
 				.stop(false,true)
 				.show()
