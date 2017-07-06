@@ -1,0 +1,15 @@
+.layer{display:none; width:100%; height:100vh; position:fixed; top:0; left:0; background:rgba(0,0,0,.55); z-index:100;}
+.layer .layer_panel{background:#FFF; border-radius:5px; margin:0 auto; width:80%; position:relative; top:30%; transform:translateY(-30%); -webkit-transform:translateY(-30%); -moz-transform:translateY(-30%); -ms-transform:translateY(-30%); -o-transform:translateY(-30%); transform:scale(0); -webkit-transform:scale(0); -moz-transform:scale(0); -ms-transform:scale(0); -o-transform:scale(0); transition:transform 0.3s linear 0s; -webkit-transition:transform 0.3s linear 0s; -moz-transition:transform 0.3s linear 0s; -ms-transition:transform 0.3s linear 0s; -o-transition:transform 0.3s linear 0s;}
+.layer .info{min-height:100px; width:100%; position:relative; padding:46px 20px 0;}
+.layer .info .info_text{margin-bottom:20px; position:relative; padding-left:30px;}
+.layer .info .info_text .DMC{position:absolute; left:0; top:0; display:block; width:20px; height:20px; font-size:20px;}
+.layer .info .info_text .icon-info{color:#3f8ad6;}
+.layer .info .info_text .icon-chenggong{color:#20b469;}
+.layer .info .info_text .icon-alert{color:#d7d24e;}
+.layer .info .info_text .icon-cuowu{color:#df5454;}
+.layer .info > i.layer_close{display:block; position:absolute; right:10px; top:10px; width:20px; height:20px; font-size:20px; color:#d9d9d9;}
+.layer .btns{width:100%; height:44px; line-height:44px;}
+.layer .btns ul{height:100%; display:box; display:-webkit-box; display:-moz-box; display:flex; display:-ms-flexbox; border-top:1px solid #ececec;}
+.layer .btns ul li{box-flex:1; -webkit-box-flex:1; -moz-box-flex:1; flex:1; -ms-flexbox:1;}
+.layer .btns ul li a{display:block; width:100%; height:100%; line-height:44px; text-align:center;}
+.layer .btns ul li:not(:first-child) a{border-left:1px solid #ececec;}

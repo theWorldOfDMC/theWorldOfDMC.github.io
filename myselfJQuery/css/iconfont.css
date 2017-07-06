@@ -1,0 +1,17 @@
+
+@font-face {font-family: "DMC";
+  src:url('http://at.alicdn.com/t/font_73qxi4v3b4xcg14i.ttf') format('truetype');
+}
+
+.DMC {
+  font-family:"DMC" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-info:before { content: "\e616"; }
+.icon-cuowu:before { content: "\e619"; }
+.icon-alert:before { content: "\e606"; }
+.icon-chenggong:before { content: "\e603"; }
