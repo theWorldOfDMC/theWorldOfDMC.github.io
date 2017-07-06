@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>input test</title>
+	<script src="./js/modernizr.js"></script>
+	<link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+	<style>
+		*{box-sizing:border-box;}
+		section{display:block; width:400px; min-height:200px; padding:20px; border:1px solid #d9d9d9;}
+		.clearfix:before,.clearfix:after{content:''; height:0; visibility:hidden; clear:both; display:block;}
+		ul{width:100%; list-style:none;}
+		ul li{height:35px; line-height:35px; margin-bottom:10px;}
+		ul li > *{display:inline-block; vertical-align:middle;}
+		ul li input{height:100%; width:60%; padding:0 5px;}
+	</style>
+	<section>
+		<ul class="clearfix">
+			<li><input type="email" placeholder="邮件地址" autofocus required></li>
+			<li><input type="file"></li>
+			<li><input type="number" placeholder="数字" min="3" max="5" required></li>
+			<li><input type="image" placeholder="img"></li>
+			<li><input type="date" placeholder="日期"></li>
+			<li><input type="color" placeholder="颜色"></li>
+			<li><input type="search" placeholder="搜索"></li>
+			<li><input type="url" placeholder="url"></li>
+			<li><input type="tel" placeholder="电话" size="11"></li>
+		</ul>
+	</section>
+	<script src="./js/common.js"></script>
+	<script>
+		function inputType(type){
+			if(!document.createElement) return false;
+			var dom_input = document.createElement('input');
+			dom_input.setAttribute('type',type);
+			if(dom_input.type == 'text' && type != 'text'){
+				console.log(type);
+			}
+		}
+		function isSupportAttr(elementName,attrName){
+			if(!document.createElement) return false;
+			var element = document.createElement(elementName);
+			return (attrName in element);
+			console.log(1);
+		}
+		/*addLoadEvent(inputType('email'));
+		addLoadEvent(inputType('file'));
+		addLoadEvent(inputType('number'));
+		addLoadEvent(inputType('image'));
+		addLoadEvent(inputType('color'));
+		addLoadEvent(inputType('tel'));
+		addLoadEvent(inputType('url'));
+		addLoadEvent(inputType('date'));
+		addLoadEvent(inputType('search'));*/
+
+		addLoadEvent(isSupportAttr('input','placeholder'));
+	</script>
+</body>
+</html>

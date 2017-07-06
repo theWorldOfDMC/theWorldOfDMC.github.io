@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>counts</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/counts.css">
+</head>
+<body>
+	<div class="bulkP part2">
+		<form action="">
+			<table id="buy_table">
+				<colgroup>
+					<col width="25%" />
+					<col width="25%" />
+					<col width="25%" />
+					<col width="25%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<td>
+							<label class="option_panel inputtext">
+								<span>商品名称</span>
+								<input type="text" value="">
+							</label>
+						</td>
+						<td>
+							<label class="option_panel inputselect">
+								<span>品牌</span>
+								<select>
+									<option value="可选" selected>可选</option>
+								</select>
+							</label>
+						</td>
+						<td>
+							<div class="option_panel">
+								<span>购买数量</span>
+								<div class="counts">
+									<i class="icon_sub"></i>
+									<input class="counts_input" type="text" value="">
+									<i class="icon_plus"></i>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="option_panel">
+								<a class="add_rows" href="javascript:;">添加</a>
+								<a class="remove_rows" href="javascript:;">删除</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+		<div class="bulk_info">尊敬的客户：您只需填好上商品名称、数量或上传采购名单（可挑选品牌），爱体育将会第一时间 为您提供报价方案。</div>
+	</div>
+
+	<script src="./jquery/jquery-1.7.2.min.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/counts.js"></script>
+	<script src="./jquery/counts.js"></script>
+</body>
+</html>

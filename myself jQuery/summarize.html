@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>summarize</title>
+		<link rel="stylesheet" href="./css/common.css">
+	</head>
+	<body>
+		<style>
+			.main{width:400px; margin:30px auto; padding:20px;}
+			.main h1{font-size:14px; width:150px; height:35px; line-height:35px; text-align:center; border:1px solid #d9d9d9; margin:0 auto;}
+			.main h2{font-size:14px; width:150px; height:35px; line-height:35px; text-align:center; border:1px dotted #d9d9d9; margin:10px auto 0;}
+			.bg{background:#f4423d !important;}
+		</style>
+		<section class="main">
+			<h1 id="target">summarize</h1>
+		</section>
+		<script>
+			// 调用insertAfter
+			function testInsertAfter(){
+				var dom_h2 = document.createElement('h2'),
+					dom_h2_text = document.createTextNode('insertAfter'),
+					dom_h1 = document.getElementById('target');
+				dom_h2.setAttribute('class','');
+				dom_h2.appendChild(dom_h2_text);
+				insertAfter(dom_h2,dom_h1);
+				
+			}
+
+			// 调用addClass
+			function testAddClass(){
+				var dom_h2 = document.getElementsByTagName('h2');
+				addClass(dom_h2,'bg');
+			}
+
+			// 执行
+			addLoadEvent(testInsertAfter);
+			addLoadEvent(testAddClass);
+
+			/*----------------------------- 封装函数 ------------------------------*/
+
+			// insertAfter 在当前元素的后面插入新元素
+			function insertAfter(new_element,target_element){
+				var parent_element = target_element.parentNode;
+				if(parent_element.lastChild == new_element){
+					parent_element.appendChild(new_element);
+					return false;	
+				}
+				parent_element.insertBefore(new_element,getNextElement(target_element.nextSibling));
+			}
+
+			// 添加class
+			function addClass(cur_element,classname){
+				var cur_class = cur_element.className;
+				!cur_class ? cur_element.className = classname : cur_element.className += ' '+classname;
+			}
+
+			// getNextElement 获取下一个元素节点
+			function getNextElement(next_node){
+				if(next_node.nodeType == 1){
+					return next_node;
+				}
+				if(next_node.nextSibling){
+					return getNextElement(next_node.nextSibling);
+				}
+				return null;
+			}
+
+			// window 加载完成后执行函数
+			function addLoadEvent(func){
+				var oldonload = window.onload;
+				if(typeof window.onload != 'function'){
+					window.onload = func;
+				}else{
+					window.onload = function(){
+						oldonload();
+						func();
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

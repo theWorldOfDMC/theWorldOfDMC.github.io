@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+	<title>lazyLoad</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./jquery/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<style>
+		header{font-size:16px; width:100%; height:44px; line-height:44px; text-align:center; color:#FFF; background:#f4423d; margin:none;}
+		ul{margin:0; padding:0; list-style:none;}
+		.main li{margin-bottom:10px; height:200px; line-height:200px; width:100%; overflow:hidden; position:relative; background:#f5f5f5;}
+		.main li a{display:block; width:100%; height:100%;}
+		.main li img{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); -o-transform:translate(-50%,-50%);}
+	</style>
+	<header><span>LazyLoad</span></header>
+	<div class="main">
+		<ul class="clearfix">
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_1.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_2.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_3.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_4.jpg" src="" alt=""></a></li>
+			<li><a href="javascript:;"><img data-url="./img/pic_5.jpg" src="" alt=""></a></li>
+		</ul>
+	</div>
+	<script>
+		$.fn.lazyLoad = function(){
+			var $img = $(this);
+			$.each($img,function(){
+				var $this = $(this),
+					$win = $(window),
+					$img_panel = $this.closest('a'),
+					$posT = $img_panel.offset().top,
+					$posB = $posT + $img_panel.outerHeight(),
+					$windowT = $win.scrollTop(),
+					$windowB = $windowT + $win.height();
+				if($posT - $windowT > 0 && $posB - $windowB < 0){
+					if($this.attr('src')) return true;
+					$this.attr('src',$this.data('url'));
+				}
+			});
+		}
+
+		$(document).ready(function(){
+			$('img[data-url]').lazyLoad();
+			$(window).scroll(function(e){
+				$('img[data-url]').lazyLoad();
+			});
+		});
+	</script>
+</body>
+</html>
