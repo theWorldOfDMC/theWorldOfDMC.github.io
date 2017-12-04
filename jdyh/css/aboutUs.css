@@ -1,0 +1,30 @@
+.main .main_panel{width:1200px; min-height:500px; margin:0 auto;}
+.main .tab_menu{padding:30px 0; border-right:1px solid #d2d2d2; float:left; width:200px; min-height:500px;}
+.main .tab_menu li{height:70px; line-height:70px; font-size:14px; position:relative;}
+.main .tab_menu li:after{content:''; display:block; width:25px; height:25px; border-radius:50%; background:#d2d2d2; right:-13px; top:22px; position:absolute; z-index:10; cursor:pointer;}
+.main .tab_menu li.cur a{color:#006caa; font-weight:800;}
+.main .tab_menu li.cur:before{content:''; display:block; width:40px; height:40px; border-radius:50%; background:#006caa; right:-21px; top:15px; position:absolute; z-index:8; cursor:pointer;}
+.main .tab_menu li a{display:block; width:100%; height:100%; text-align:center; outline:none; text-decoration:none;}
+
+.main .tab_list{float:left; width:1000px; padding:40px 0 0 80px;}
+.main .tab_list .list_panel > h1{font-size:20px; height:65px; line-height:50px; border-bottom:1px solid #d2d2d2; margin-bottom:35px;}
+.main .tab_list .list_panel > h1 span{font-size:14px; margin-left:20px;}
+
+.main .tab_list .intro{height:300px; padding:15px 0 0 400px; background:transparent url(../images/jdyh_23.jpg) no-repeat scroll 0 0;}
+.main .tab_list .intro p{text-indent:20px; line-height:200%;}
+
+.main .tab_list .culture p{text-indent:20px; line-height:200%;}
+.main .tab_list .culture ul{margin-top:10px;}
+.main .tab_list .culture li{float:left; margin-right:20px;}
+
+.main .tab_list .qualification p{text-indent:20px; line-height:200%;}
+.main .tab_list .qualification ul{margin-top:30px;}
+.main .tab_list .qualification li{float:left; margin-right:20px;}
+
+.main .tab_list .advantage{height:300px; padding:15px 630px 0 0; background:transparent url(../images/jdyh_30.jpg) no-repeat scroll right 0;}
+.main .tab_list .advantage p{text-indent:20px; line-height:200%;}
+
+.main .tab_list .management{height:300px; padding:15px 400px 0 0; background:transparent url(../images/jdyh_34.jpg) no-repeat scroll right 0;}
+.main .tab_list .management p{text-indent:20px; line-height:200%;}
+.main .tab_list .management ul{margin-top:10px;}
+.main .tab_list .management li{float:left; margin-right:5px;}

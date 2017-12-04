@@ -1,0 +1,16 @@
+#banner{width:100%; height:450px; overflow:hidden; position:relative;}
+#banner_img{ display:block; position:relative;}
+#banner_img li{ position:absolute; top:0; left:0; width:100%; background-position:center; background-size:cover;display:none;}
+#banner_img li.item1{ background-image:url(../images/jdyh_banner_01.jpg); display:block;}
+#banner_img li.item2{ background-image:url(../images/jdyh_banner_01.jpg);}
+#banner_ctr{position:absolute; z-index:1; bottom:10px;}
+#banner_ctr ul{width:100%;}
+#banner_ctr li.styclsa{background:rgba(255,255,255,0.5) !important; background:#FFF; filter:alpha(opacity=50); height:10px; width:60px; float:left; display:inline-block; height:10px; cursor:pointer; margin-left:1px;}
+#banner_ctr li.styclsa:hover{background:rgba(255,255,255,1) !important; background:#FFF; filter:alpha(opacity=100);}
+#banner_ctr li.styclsa:first-child{margin:0;}
+#drag_ctr{position:absolute; width:60px; height:10px; z-index:1; background:rgba(255,255,255,1) !important; background:#FFF; filter:alpha(opacity=100);}
+.wrapper{ width:986px; margin:0 auto; position:relative; height:450px;}
+.prevNav{position:absolute; cursor:pointer; left:50px; width:80px; height:450px; float:left; display:inline-block !important; z-index:9990; background:url(../images/banner-arrows.png) no-repeat 120px 190px; opacity:0; filter:alpha(opacity=0); transition:all 0.5s ease-in-out 0s; -moz-transition:all 0.5s ease-in-out 0s; -webkit-transition:all 0.5s ease-in-out 0s; -ms-transition:all 0.5s ease-in-out 0s;}
+.nextNav{position:absolute; cursor:pointer; right:31px; width:120px; height:450px; float:right; display:inline-block !important; z-index:9990; background:url(../images/banner-arrows.png) no-repeat -250px 190px; opacity:0; filter:alpha(opacity=0); transition:all 0.5s ease-in-out 0s; -moz-transition:all 0.5s ease-in-out 0s; -webkit-transition:all 0.5s ease-in-out 0s; -ms-transition:all 0.5s ease-in-out 0s;}
+.prevNav:hover{background:url(../images/banner-arrows.png) no-repeat 0px 190px; opacity:1; filter:alpha(opacity=100);}
+.nextNav:hover{background:url(../images/banner-arrows.png) no-repeat -159px 190px; opacity:1; filter:alpha(opacity=100);}
