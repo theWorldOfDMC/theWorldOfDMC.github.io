@@ -1,0 +1,46 @@
+.main{width:100% !important;}
+.step{height:100vh; position:relative; background:#000;}
+.scale_opacity_panel{overflow:hidden; position:absolute; width:100%; min-height:100vh; height:100vh; top:0; left:0; opacity:0; transform-origin:center center; -webkit-transform-origin:center center; -moz-transform-origin:center center; -o-transform-origin:center center; -ms-transform-origin:center center; transform:scale(0.7); -webkit-transform:scale(0.7); -moz-transform:scale(0.7); -ms-transform:scale(0.7); -o-transform:scale(0.7); transition:all 0.7s ease-in-out 0s; -webkit-transition:all 0.7s ease-in-out 0s; -moz-transition:all 0.7s ease-in-out 0s; -ms-transition:all 0.7s ease-in-out 0s; -o-transition:all 0.7s ease-in-out 0s;}
+.scale_opacity_panel.cur{opacity:1; transform:scale(1); -webkit-transform:scale(1); -moz-transform:scale(1); -ms-transform:scale(1); -o-transform:scale(1);}
+.scale_opacity_half_panel{box-shadow:0px 0px 40px 0 rgba(0, 0, 0, 0); position:absolute; width:50%; height:100vh !important; top:0; background:#282633; color:#FFF; transition:all 0.7s ease-in-out 0s; -webkit-transition:all 0.7s ease-in-out 0s; -moz-transition:all 0.7s ease-in-out 0s; -ms-transition:all 0.7s ease-in-out 0s; -o-transition:all 0.7s ease-in-out 0s;}
+.scale_opacity_half_panel:first-of-type{background-repeat:no-repeat; background-position:center center;  background-size:cover;}
+.scale_opacity_half_panel:last-of-type > .pos_mid{padding:0 25%; position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%);}
+.scale_opacity_half_panel:last-of-type h1{font-size:24px; height:30px; line-height:30px; margin-bottom:45px;}
+.scale_opacity_half_panel:last-of-type p{font-size:14px;}
+.step .scale_opacity_panel:nth-of-type(odd) .scale_opacity_half_panel:first-of-type,.step .scale_opacity_panel:nth-of-type(even) .scale_opacity_half_panel:last-of-type{left:0; -webkit-transform:translateX(-100%); -moz-transform:translateX(-100%); -ms-transform:translateX(-100%); -o-transform:translateX(-100%); transform:translateX(-100%);}
+.step .scale_opacity_panel:nth-of-type(even) .scale_opacity_half_panel:first-of-type,.step .scale_opacity_panel:nth-of-type(odd) .scale_opacity_half_panel:last-of-type{right:0; -webkit-transform:translateX(100%); -moz-transform:translateX(100%); -ms-transform:translateX(100%); -o-transform:translateX(100%); transform:translateX(100%);}
+
+.step1 .scale_opacity_panel:nth-of-type(1) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_05.jpg);}
+.step1 .scale_opacity_panel:nth-of-type(2) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_06.jpg);}
+.step1 .scale_opacity_panel:nth-of-type(3) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_07.jpg);}
+
+.step2 .scale_opacity_panel:nth-of-type(1) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_08.jpg);}
+.step2 .scale_opacity_panel:nth-of-type(2) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_09.jpg);}
+.step2 .scale_opacity_panel:nth-of-type(3) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_10.jpg);}
+.step2 .scale_opacity_panel:nth-of-type(4) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_11.jpg);}
+.step2 .scale_opacity_panel:nth-of-type(5) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_12.jpg);}
+.step2 .scale_opacity_panel:nth-of-type(6) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_13.jpg);}
+
+.step3 .scale_opacity_panel:nth-of-type(1) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_14.jpg);}
+.step3 .scale_opacity_panel:nth-of-type(2) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_15.jpg);}
+.step3 .scale_opacity_panel:nth-of-type(3) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_16.jpg);}
+.step3 .scale_opacity_panel:nth-of-type(4) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_17.jpg);}
+.step3 .scale_opacity_panel:nth-of-type(5) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_18.jpg);}
+
+.step4 .scale_opacity_panel:nth-of-type(1) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_19.jpg);}
+.step4 .scale_opacity_panel:nth-of-type(2) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_20.jpg);}
+.step4 .scale_opacity_panel:nth-of-type(3) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_21.jpg);}
+.step4 .scale_opacity_panel:nth-of-type(4) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_22.jpg);}
+.step4 .scale_opacity_panel:nth-of-type(5) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_23.jpg);}
+
+.step5 .scale_opacity_panel:nth-of-type(1) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_24.jpg);}
+.step5 .scale_opacity_panel:nth-of-type(2) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_25.jpg);}
+.step5 .scale_opacity_panel:nth-of-type(3) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_26.jpg);}
+.step5 .scale_opacity_panel:nth-of-type(4) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_27.jpg);}
+.step5 .scale_opacity_panel:nth-of-type(5) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_28.jpg);}
+.step5 .scale_opacity_panel:nth-of-type(6) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_29.jpg);}
+.step5 .scale_opacity_panel:nth-of-type(7) .scale_opacity_half_panel:first-of-type{background-image:url(../img/zenTea_30.jpg);}
+
+.step .options{position:absolute; z-index:999; top:10%; right:3%;}
+.step .options .prev{width:40px; height:40px; background-position:0 0; display:block; margin-right:10px; opacity:0.3;}
+.step .options .next{width:40px; height:40px; background-position:0 -50px; display:block;}

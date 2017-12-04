@@ -1,0 +1,54 @@
+/* base start*/
+*{margin:0; padding:0;}
+body{font:12px/20px Verdana, 'Microsoft yahei', Geneva, Tahoma, sans-serif; color:#282633; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;}
+a{text-decoration:none; outline:none; color:#282633;}
+ul,dl,ol{list-style:none;}
+.L{float:left;}
+.R{float:right;}
+.clearfix:before,.clearfix:after{content:''; clear:both; display:block; visibility:hidden; height:0;}
+.hide{display:none;}
+/* base end*/
+
+/* head start*/
+.head{width:100%; position:relative;}
+/* nav start*/
+.nav{width:100%; height:80px; line-height:80px; border-bottom:1px solid rgba(255,255,255,0.5); background:rgba(0,0,0,0.05); position:absolute; z-index:10;}
+.nav .panel{width:1200px; height:100%; margin:0 auto; text-align:center;}
+.nav .page_link{display:inline-block; height:100%; padding:0 20px; margin-left:80px; color:#FFF; font-size:16px; position:relative;}
+.nav .page_link.cur{color:#d5a550;}
+.nav .page_link:first-child{margin-left:0;}
+.nav .page_link.logo{width:67px; background:transparent url(../img/zenTea_logo.png) no-repeat center center;}
+.nav .page_link.logo:before{content:'.'; position:relative; top:-999px;}
+.nav .list{position:absolute; top:81px; left:0; width:100%; padding-top:15px;}
+.nav .list:after{content:''; position:absolute; left:45%; top:0; width:0; height:0; border-style:solid solid none; border-width:5px 7px 0; border-color:rgba(255,255,255,0.5) transparent transparent; display:block;}
+.nav .list li{height:32px; line-height:32px; text-align:center; color:#FFF; border-bottom:1px solid rgba(255,255,255,0.5);}
+.nav .list li a{display:block; height:100%; color:#FFF; width:100%; font-size:14px;}
+.nav .list li a:hover{color:#d5a550;}
+/* nav end*/
+/* head end*/
+
+.main{width:1200px; margin:0 auto; padding-bottom:50px;}
+
+/* tit start*/
+.tit{width:1200px; margin:0 auto; padding:30px 0; text-align:center;}
+.tit h1{font-size:32px; height:50px; line-height:50px; position:relative;}
+.tit h3{font-size:16px; height:20px; line-height:14px; position:relative;}
+hr{width:30px; height:2px; background:#282633; display:block; margin:5px auto 20px;}
+.tit h2{font-size:12px; height:40px; line-height:40px; position:relative; color:#999;}
+/* tit end*/
+
+/* tit start*/
+.footer{width:100%; height:45px; line-height:45px; background:#282633;}
+.footer .panel{width:1200px; margin:0 auto; text-align:center;}
+.footer .panel a{color:#FFF; position:relative;}
+.footer .panel a:before{content:''; width:21px; height:18px; position:absolute; left:-30px; top:-2px; display:block; background:transparent url(../img/zenTea_logo.png) no-repeat 0 0/contain;}
+/* tit end*/
+
+/* banner_bg start */
+.banner_bg{width:100%; height:380px; background:transparent url(../img/zenTea_otherBanner_01.jpg) no-repeat center 0;}
+/* banner_bg end */
+
+/* zenTea_bg start */
+.zenTea_bg{background:transparent url(../img/zenTea_bg.png) no-repeat 0 0;}
+/* zenTea_bg end */

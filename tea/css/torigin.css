@@ -1,0 +1,68 @@
+.main {
+  padding-bottom: 20px;
+}
+.main .sub_tit {
+  color: #999;
+  font-size: 14px;
+}
+.products {
+  overflow: hidden;
+}
+.products .wrap-products {
+  margin: 0 -15px;
+  overflow: hidden;
+}
+.products .product {
+  float: left;
+  margin: 0 15px;
+  padding-bottom: 30px;
+}
+.products .img {
+  width: 380px;
+  height: 220px;
+}
+
+.m-feature {
+  background-color: #fafafa;
+  padding-bottom: 50px;
+}
+.wrap-feature {
+  padding:10px 0 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+.m-feature .sub_tit {
+  color: #999;
+  font-size: 14px;
+}
+.feature {
+  overflow: hidden;
+}
+.feature .clear {
+  clear: both;
+}
+.feature dl {
+  margin:30px 0;
+  float: left;
+  width: 400px;
+}
+.feature dt {
+  float: left;
+  width: 110px;
+}
+.feature img {
+  margin-left: 30px;
+}
+.feature dd {
+  float: left;
+  width: 290px;
+}
+.feature dd h3 {
+  font-size: 18px;
+  line-height: 33px;
+  color: #282633;
+  font-weight: bold;
+}
+.feature dd p {
+  color: #666;
+}

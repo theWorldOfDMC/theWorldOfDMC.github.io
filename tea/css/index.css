@@ -1,0 +1,7 @@
+.contact_us{padding:0 100px; height:182px;}
+.wechat{width:195px; height:115px; border:1px solid #e6e6e6; padding:65px 40px 0 213px; background:#f7f7f7 url(../img/zenTea_03.jpg) no-repeat 13px 13px; text-align:center; color:#d5a550;}
+.wechat h1{font-size:20px; height:28px; line-height:25px;}
+.wechat h2{font-size:14px; height:20px; line-height:20px;}
+.microblog{width:165px; height:135px; border:1px solid #e6e6e6; padding:45px 40px 0 243px; background:#f7f7f7 url(../img/zenTea_03_1.png) no-repeat 40px 53px; text-align:center; color:#d5a550;}
+.microblog h1{font-size:20px; height:25px; line-height:25px;}
+.microblog a{width:100%; text-align:center; color:#FFF; border-radius:2px; height:45px; line-height:45px; font-size:20px; background:#d5a550; display:block; margin-top:20px;}

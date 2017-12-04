@@ -1,0 +1,25 @@
+.main .sub_tit {
+  color: #999;
+  font-size: 14px;
+}
+.products {
+  overflow: hidden;
+}
+.products .wrap-products {
+  margin: 0 -60px;
+}
+.products .product {
+  float: left;
+  margin: 0 60px;
+  padding-bottom: 10px;
+}
+.products .img {
+  width: 540px;
+  height: 320px;
+}
+.products .text {
+  color: #d5a550;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+}

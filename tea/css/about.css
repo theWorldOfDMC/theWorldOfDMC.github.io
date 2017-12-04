@@ -1,0 +1,24 @@
+.main .text {
+  font-size: 14px;
+  color: #666;
+  line-height: 40px;
+}
+.about-bg {
+  height: 442px;
+  background-image: url(../img/about_bg.jpg);
+  background-position: center;
+}
+.concat {
+  width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+.concat dl {
+  float: left;
+  width: 300px;
+}
+.concat dd {
+  line-height: 50px;
+}
+.concat {}

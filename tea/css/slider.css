@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+#banner{width:100%; height:100vh; overflow:hidden; position:relative;}
+#banner_img{ display:block; position:relative;}
+#banner_img li{position:absolute; top:0; left:0; width:100%; height:100vh; background-size:cover; background-position:top center; background-repeat:no-repeat; display:none;}
+#banner_img li.item1{background-image:url(../img/zenTea_indexBanner_01.jpg); display:list-item;}
+#banner_img li.item2{background-image:url(../img/zenTea_indexBanner_02.jpg);}
+#banner_img li.item3{background-image:url(../img/zenTea_indexBanner_03.jpg);}
+#banner_img li.item4{background-image:url(../img/zenTea_indexBanner_04.jpg);}
+#banner_img li.item5{background-image:url(../img/zenTea_indexBanner_05.jpg);}
+#banner_ctr{position:absolute; z-index:1; bottom:15px;}
+#banner_ctr ul{width:100%;}
+#banner_ctr li.styclsa{background:#FFF; height:10px; width:10px; float:left; display:inline-block; cursor:pointer; margin-left:10px; border-radius:50%;}
+#banner_ctr li.styclsa:hover{background:#d5a550;}
+#banner_ctr li.styclsa:first-child{margin:0;}
+#drag_ctr{position:absolute; width:10px; height:10px; z-index:1; background:#d5a550; border-radius:50%;}
